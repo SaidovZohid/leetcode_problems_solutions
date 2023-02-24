@@ -17,7 +17,18 @@ func binarySearch(arr []int, item int) int {
 	return 0
 }
 
+func printNumbersWithRecursion(num int) {
+	if num <= 0 {
+		fmt.Println("It is over!")
+	} else {
+		fmt.Println(num)
+		num--
+		printNumbersWithRecursion(num)
+	}
+}
+
 func main(){
-	arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	fmt.Println(binarySearch(arr, 2))
+	// arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	// fmt.Println(binarySearch(arr, 2))
+	printNumbersWithRecursion(10)
 }
